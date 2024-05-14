@@ -6,3 +6,21 @@ export type User = {
   country: string;
   city: string;
 };
+export type MenuItem = {
+  _id: string;
+  name: string;
+  price: number;
+};
+export type Restaurant = {
+  _id: string;
+  user: string;
+  restaurantName: string;
+  country: string;
+  city: string;
+  deliveryPrice: number;
+  estimatedDeliveryTime: number;
+  cuisines: string[];
+  menuItems: MenuItem[];
+  imageUrl: string;
+  lastUpdated: string;
+};
