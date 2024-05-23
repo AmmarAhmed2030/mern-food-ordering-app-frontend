@@ -29,7 +29,11 @@ export default function MobileNav() {
             {isAuthenticated ? (
               <span className="flex items-center font-bold gap-2">
                 {user?.picture ? (
-                  <img src={user?.picture} alt=" " className="rounded-lg" />
+                  <img
+                    src={user?.picture}
+                    alt=" "
+                    className="rounded-full w-10 h-10"
+                  />
                 ) : (
                   <CircleUserRound className="text-orange-600" />
                 )}

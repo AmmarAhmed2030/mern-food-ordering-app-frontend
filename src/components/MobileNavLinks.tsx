@@ -12,6 +12,18 @@ export default function MobileNavLinks() {
       >
         User Profile
       </Link>
+      <Link
+        className="flex bg-white items-center font-bold hover:text-orange-600"
+        to="/manage-restaurant"
+      >
+        My Restaurant
+      </Link>
+      <Link
+        className="flex bg-white items-center font-bold hover:text-orange-600"
+        to="/order-status"
+      >
+        Order Status
+      </Link>
       <Button
         className="flex items-center font-bold hover:text-orange-600 "
         onClick={() => logout()}

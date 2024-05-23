@@ -108,8 +108,9 @@ export default function DetailPage() {
         <div className="flex flex-col gap-4">
           <RestaurantInfo restaurant={restaurant} />
           <span className="text-2xl font-bold tracking-tight ">Menu</span>
-          {restaurant.menuItems.map((menuItem) => (
+          {restaurant.menuItems.map((menuItem, index) => (
             <MenuItemComponent
+              key={index}
               menuItem={menuItem}
               addToCart={() => addToCart(menuItem)}
             />
