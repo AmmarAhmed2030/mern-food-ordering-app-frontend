@@ -1,8 +1,13 @@
-import hero from "../assets/hero.png";
+import header from "../assets/header.jpg";
+
 export default function Hero() {
   return (
-    <div>
-      <img src={hero} alt="" className="w-full max-h-[600px] object-cover" />
+    <div className="">
+      <img
+        src={header}
+        alt=""
+        className="w-full px-24 py-12 mx-auto max-h-[600px] object-cover rounded-lg"
+      />
     </div>
   );
 }

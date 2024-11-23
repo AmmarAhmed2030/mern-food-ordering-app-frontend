@@ -24,6 +24,13 @@ export type Restaurant = {
   imageUrl: string;
   lastUpdated: string;
 };
+export type RestaurantsState = {
+  restaurants: Restaurant[];
+  topRestaurants: Restaurant[];
+  loading: boolean;
+  error: string | null;
+  getTopRestaurants: () => Promise<void>;
+};
 export type OrderStatus =
   | "placed"
   | "paid"

@@ -5,10 +5,10 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Link } from "react-router-dom";
-import { CircleUserRound } from "lucide-react";
 import { DropdownMenuContent } from "@radix-ui/react-dropdown-menu";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
+import fake_user from "../assets/fake_user.png";
 export default function UsernameMenu() {
   const { user, logout } = useAuth0();
   return (
@@ -22,11 +22,8 @@ export default function UsernameMenu() {
             hover:border-orange-600"
           />
         ) : (
-          <CircleUserRound className="text-orange-600" />
+          <img src={fake_user} alt="" className="rounded-full w-10 h-10" />
         )}
-        <span className="text-orange-600 hover:border-b-2 p-b-2 hover:border-orange-600">
-          {user?.name ? user.name : user?.email}
-        </span>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-white border-2 border-orange-600 rounded-lg m-1">
         <DropdownMenuItem className="p-5 rounded-lg">
@@ -40,6 +37,14 @@ export default function UsernameMenu() {
         <DropdownMenuItem className="p-5 rounded-lg">
           <Link to="/user-profile" className="font-bold hover:text-orange-600">
             User Profile
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem className="p-5 rounded-lg">
+          <Link
+            to="/order-status"
+            className="font-bold hover:text-orange-600 hover:border-b-2 hover:border-b-orange-600"
+          >
+            Order Status
           </Link>
         </DropdownMenuItem>
         <Separator />
