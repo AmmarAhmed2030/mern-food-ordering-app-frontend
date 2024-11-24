@@ -25,8 +25,8 @@ export default function UsernameMenu() {
           <img src={fake_user} alt="" className="rounded-full w-10 h-10" />
         )}
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-white border-2 border-orange-600 rounded-lg m-1">
-        <DropdownMenuItem className="p-5 rounded-lg">
+      <DropdownMenuContent className="bg-gray-100 rounded-lg m-1 z-50">
+        <DropdownMenuItem className="px-5 py-2 rounded-lg">
           <Link
             to="/manage-restaurant"
             className="font-bold hover:text-orange-600"
@@ -34,12 +34,12 @@ export default function UsernameMenu() {
             Manage Restaurant
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem className="p-5 rounded-lg">
+        <DropdownMenuItem className="px-5 py-2 rounded-lg">
           <Link to="/user-profile" className="font-bold hover:text-orange-600">
             User Profile
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem className="p-5 rounded-lg">
+        <DropdownMenuItem className="px-5 py-2rounded-lg">
           <Link
             to="/order-status"
             className="font-bold hover:text-orange-600 hover:border-b-2 hover:border-b-orange-600"
@@ -48,7 +48,7 @@ export default function UsernameMenu() {
           </Link>
         </DropdownMenuItem>
         <Separator />
-        <DropdownMenuItem className="p-5 rounded-lg">
+        <DropdownMenuItem className="px-5 py-2 rounded-lg">
           <Button
             className="flex flex-1 font-bold bg-orange-600"
             onClick={() => logout()}
