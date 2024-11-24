@@ -22,11 +22,16 @@ const OrderStatusDetail = ({ order }: Props) => {
           <span className="font-bold py-3">Your Order</span>
           <ScrollArea className="h-36 w-60 rounded-md border">
             <div className="p-4">
-              <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
+              <h4 className="mb-4 text-sm font-medium leading-none">
+                cart items
+              </h4>
               {order.cartItems.map((cartItem, index) => (
                 <>
-                  <div key={index} className="flex text-sm">
-                    {cartItem.name} <X className="w-2 h-2 text-gray-500" />{" "}
+                  <div
+                    key={index}
+                    className="flex items-center justify-between text-sm"
+                  >
+                    {cartItem.name} <X className="w-2 h-2 text-gray-500" />
                     {cartItem.quantity}
                   </div>
                   <Separator className="my-2" />
@@ -44,8 +49,8 @@ const OrderStatusDetail = ({ order }: Props) => {
         </div>
       </div>
       <Separator />
-      <div className="flex flex-col">
-        <span className="font-bold py-3">Total</span>
+      <div className="flex justify-between">
+        <span className="font-bold py-2">Total</span>
         <span>💲 {(order.totalAmount / 100).toFixed(2)}</span>
       </div>
     </div>
