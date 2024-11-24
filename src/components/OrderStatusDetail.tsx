@@ -8,7 +8,7 @@ type Props = {
 };
 const OrderStatusDetail = ({ order }: Props) => {
   return (
-    <div className="space-y-5">
+    <div className="flex space-x-5">
       <div className="flex flex-col">
         <span className="font-bold py-3">Delivering to ⤵️⤵️</span>
         <span>{order.deliveryDetails.name}</span>
