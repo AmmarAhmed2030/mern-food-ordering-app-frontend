@@ -1,5 +1,7 @@
 import { Order } from "@/types";
 import { Separator } from "./ui/separator";
+import { ScrollArea } from "./ui/scroll-area";
+import { X } from "lucide-react";
 
 type Props = {
   order: Order;
@@ -16,13 +18,26 @@ const OrderStatusDetail = ({ order }: Props) => {
       </div>
       <div className="flex flex-col">
         <span className="font-bold py-3">Your Order</span>
-        <ul>
+        <ScrollArea className="h-32 w-52 rounded-md border">
+          <div className="p-4">
+            <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
+            {order.cartItems.map((cartItem, index) => (
+              <>
+                <div key={index} className="text-sm">
+                  {cartItem.name} <X /> {cartItem.quantity}
+                </div>
+                <Separator className="my-2" />
+              </>
+            ))}
+          </div>
+        </ScrollArea>
+        {/* <ul>
           {order.cartItems.map((cartItem, index) => (
             <li key={index}>
               {cartItem.name} ❎ {cartItem.quantity}
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
       <Separator />
       <div className="flex flex-col">
